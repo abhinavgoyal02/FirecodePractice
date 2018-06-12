@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="TestNGLearningSuite"
+	verbose="1">
+	<test thread-count="5" name="SequenceParallel01" parallel="true"
+		enabled="false">
+		<classes>
+			<class name="NumberArraysTests.TestMaxProfitLossInStocksTestNG" />
+		</classes>
+	</test> <!-- SequenceParallel01 -->
+	<test thread-count="2" name="SequenceParallel02" parallel="true"
+		enabled="false">
+		<classes>
+			<class name="NumberArraysTests.TestPrimeNumbersTestNG" />
+		</classes>
+	</test>
+	<test thread-count="2" name="RestAPIJSONTests">
+		<classes>
+			<!-- <class name="RestAssuredJSONTests.TestPOSTRequest"></class> -->
+			<!-- <class name="RestAssuredJSONTests.TestGETRequest"></class> -->
+			<!-- <class name="RestAssuredJSONTests.TestPOSTResponseValidator"></class> -->
+			<!-- <class name="RestAssuredJSONTests.TestPOSTDeleteE2E"></class> -->
+			<class name="RestAssuredJSONTests.TestGETRequestJSONParse"></class>
+		</classes>
+	</test>
+	<test thread-count="2" name="RestAPIXMLTests" enabled="false">
+		<classes>
+			<!-- <class name="RestAssuredXMLTests.TestPOSTRequest"></class> -->
+			<!-- <class name="RestAssuredXMLTests.TestPOSTResponseValidator"></class> -->
+			<!-- <class name="RestAssuredXMLTests.TestPOSTDeleteE2E"></class> -->
+		</classes>
+	</test>
+
+</suite> <!-- TestNGLearningSuite -->

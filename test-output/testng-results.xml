@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNGLearningSuite" duration-ms="14789" started-at="2018-06-10T11:49:42Z" finished-at="2018-06-10T11:49:57Z">
+    <groups>
+    </groups>
+    <test name="RestAPIJSONTests" duration-ms="14789" started-at="2018-06-10T11:49:42Z" finished-at="2018-06-10T11:49:57Z">
+      <class name="RestAssuredJSONTests.TestGETRequestJSONParse">
+        <test-method status="PASS" signature="searchGoogleMapsJSON()[pri:0, instance:RestAssuredJSONTests.TestGETRequestJSONParse@724af044]" name="searchGoogleMapsJSON" duration-ms="14642" started-at="2018-06-10T17:19:42Z" finished-at="2018-06-10T17:19:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchGoogleMapsJSON -->
+      </class> <!-- RestAssuredJSONTests.TestGETRequestJSONParse -->
+    </test> <!-- RestAPIJSONTests -->
+  </suite> <!-- TestNGLearningSuite -->
+</testng-results>

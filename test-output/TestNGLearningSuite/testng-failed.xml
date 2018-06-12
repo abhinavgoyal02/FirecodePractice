@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNGLearningSuite]">
+  <test name="RestAPIJSONTests(failed)">
+    <classes>
+      <class name="RestAssuredJSONTests.TestGETRequestJSONParse">
+        <methods>
+          <include name="searchGoogleMapsJSON"/>
+        </methods>
+      </class> <!-- RestAssuredJSONTests.TestGETRequestJSONParse -->
+    </classes>
+  </test> <!-- RestAPIJSONTests(failed) -->
+</suite> <!-- Failed suite [TestNGLearningSuite] -->

@@ -1,6 +1,9 @@
 package RestAssuredJSONTests;
 
+import org.testng.SkipException;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
+import org.testng.asserts.SoftAssert;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -10,7 +13,7 @@ import io.restassured.response.Response;
 public class TestGETRequestJSONParse {
 	private String baseURI = "https://maps.googleapis.com/"; 
 
-	@Test
+	@Test (enabled=false)
 	public void searchGoogleMapsJSON() {
 		RestAssured.baseURI = baseURI;
 	
@@ -43,6 +46,30 @@ public class TestGETRequestJSONParse {
 //			}
 //			System.out.println();
 //		}
+		
+	}
+	
+	@Test 
+	public void skipTest() {
+		System.out.println();
+		
+		throw new SkipException("Test is SKIPPED: Error making API call");
+	}
+	
+	@Test
+	public void testAssertions() {
+		Assertion hardAssert = new Assertion();
+		SoftAssert softAssert = new SoftAssert();
+		
+		hardAssert.assertEquals(true, true);
+		System.out.println("1st Hard Assertion is done");
+		hardAssert.assertEquals(true, true);
+		System.out.println("2nd Hard Assertion is done");
+		softAssert.assertEquals(false, true);
+		softAssert.assertEquals(0, 2);
+		System.out.println("Soft Assertions are done");
+		softAssert.assertTrue(false);
+		softAssert.assertAll();
 		
 	}
 		

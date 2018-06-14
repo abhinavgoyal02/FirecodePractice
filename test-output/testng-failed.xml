@@ -5,7 +5,8 @@
     <classes>
       <class name="RestAssuredJSONTests.TestGETRequestJSONParse">
         <methods>
-          <include name="searchGoogleMapsJSON"/>
+          <include name="skipTest"/>
+          <include name="testAssertions"/>
         </methods>
       </class> <!-- RestAssuredJSONTests.TestGETRequestJSONParse -->
     </classes>

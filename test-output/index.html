@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestNGLearningSuite">
-              <span class="suite-name border-passed">TestNGLearningSuite</span>
+              <span class="suite-name border-failed">TestNGLearningSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,12 +48,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-TestNGLearningSuite">
-                    <span>C:\DATA DRIVE\SeleniumWorkspace\Firecode\testng.xml</span>
+                    <span>C:\Users\Abhinav Goyal\workspace\FirecodePractice\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-TestNGLearningSuite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-TestNGLearningSuite" class="hide-methods passed suite-TestNGLearningSuite"> (hide)</a> <!-- hide-methods passed suite-TestNGLearningSuite -->
-                      <a href="#" panel-name="suite-TestNGLearningSuite" class="show-methods passed suite-TestNGLearningSuite"> (show)</a> <!-- show-methods passed suite-TestNGLearningSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestNGLearningSuite" class="hide-methods failed suite-TestNGLearningSuite"> (hide)</a> <!-- hide-methods failed suite-TestNGLearningSuite -->
+                      <a href="#" panel-name="suite-TestNGLearningSuite" class="show-methods failed suite-TestNGLearningSuite"> (show)</a> <!-- show-methods failed suite-TestNGLearningSuite -->
                     </span>
-                    <div class="method-list-content passed suite-TestNGLearningSuite">
+                    <div class="method-list-content failed suite-TestNGLearningSuite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNGLearningSuite" title="RestAssuredJSONTests.TestGETRequestJSONParse" hash-for-method="searchGoogleMapsJSON">searchGoogleMapsJSON</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNGLearningSuite" title="jira.api.rest.POSTJIRAIssue" hash-for-method="addPlaceInGoogleMaps">addPlaceInGoogleMaps</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-TestNGLearningSuite -->
+                    </div> <!-- method-list-content failed suite-TestNGLearningSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,25 +116,37 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestNGLearningSuite" class="panel TestNGLearningSuite">
-          <div class="suite-TestNGLearningSuite-class-passed">
+          <div class="suite-TestNGLearningSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">RestAssuredJSONTests.TestGETRequestJSONParse</span>
+              <img src="failed.png"/>
+              <span class="class-name">jira.api.rest.POSTJIRAIssue</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchGoogleMapsJSON">
-                  </a> <!-- searchGoogleMapsJSON -->
-                  <span class="method-name">searchGoogleMapsJSON</span>
+                  <a name="addPlaceInGoogleMaps">
+                  </a> <!-- addPlaceInGoogleMaps -->
+                  <span class="method-name">addPlaceInGoogleMaps</span>
+                  <div class="stack-trace">java.nio.file.NoSuchFileException: JIRALoginPayload.json
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.Files.newByteChannel(Unknown Source)
+	at java.nio.file.Files.newByteChannel(Unknown Source)
+	at java.nio.file.Files.readAllBytes(Unknown Source)
+	at utilities.PayloadReader.getPayloadasString(PayloadReader.java:12)
+	at jira.api.rest.POSTJIRAIssue.addPlaceInGoogleMaps(POSTJIRAIssue.java:35)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNGLearningSuite-class-passed -->
+          </div> <!-- suite-TestNGLearningSuite-class-failed -->
         </div> <!-- panel TestNGLearningSuite -->
         <div panel-name="test-xml-TestNGLearningSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\DATA DRIVE\SeleniumWorkspace\Firecode\testng.xml</span>
+            <span class="header-content">C:\Users\Abhinav Goyal\workspace\FirecodePractice\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -142,10 +154,12 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;TestNGLearningSuite&quot;&gt;
   &lt;test thread-count=&quot;2&quot; name=&quot;RestAPIJSONTests&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;RestAssuredJSONTests.TestGETRequestJSONParse&quot;/&gt;
-    &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RestAPIJSONTests --&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;JIRARestAPITests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;jira.api.rest.POSTJIRAIssue&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- JIRARestAPITests --&gt;
 &lt;/suite&gt; &lt;!-- TestNGLearningSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,7 +171,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">RestAPIJSONTests (1 class)</span>
+                <span class="test-name">RestAPIJSONTests (0 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">JIRARestAPITests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,14 +202,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchGoogleMapsJSON')
-data.setCell(0, 2, 'RestAssuredJSONTests.TestGETRequestJSONParse')
-data.setCell(0, 3, 14642);
+data.setCell(0, 1, 'addPlaceInGoogleMaps')
+data.setCell(0, 2, 'jira.api.rest.POSTJIRAIssue')
+data.setCell(0, 3, 592);
 window.suiteTableData['TestNGLearningSuite']= { tableData: data, tableDiv: 'times-div-TestNGLearningSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 592 ms</span>
               <div id="times-div-TestNGLearningSuite">
               </div> <!-- times-div-TestNGLearningSuite -->
             </div> <!-- times-div -->
@@ -218,9 +235,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">RestAssuredJSONTests.TestGETRequestJSONParse</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">jira.api.rest.POSTJIRAIssue</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">searchGoogleMapsJSON</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addPlaceInGoogleMaps</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

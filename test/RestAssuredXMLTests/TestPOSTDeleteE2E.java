@@ -2,14 +2,12 @@ package RestAssuredXMLTests;
 
 import java.io.IOException;
 
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
-import utilities.XMLPayloadReader;
+import utilities.PayloadReader;
 
 public class TestPOSTDeleteE2E {
 	private String baseURI = "https://maps.googleapis.com";
@@ -17,7 +15,7 @@ public class TestPOSTDeleteE2E {
 	@Test
 	public void addPlaceInGoogleMaps() throws IOException {
 		RestAssured.baseURI = baseURI;
-		String payloadBody = XMLPayloadReader.getXMLasString(System.getProperty("user.dir") + "\\test\\RestAssuredXMLTests\\POSTRequestPayload.xml");
+		String payloadBody = PayloadReader.getPayloadasString("POSTRequestPayload.xml");
 		
 		Response res = RestAssured.given()
 			.queryParam("key", "AIzaSyCn0NwEYM0NdwKqqr1klSSEovTEXJZidLg")

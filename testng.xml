@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="TestNGLearningSuite"
 	verbose="1">
-	<test thread-count="5" name="SequenceParallel01" parallel="true"
+	<test thread-count="5" name="SequenceParallel01" parallel="false"
 		enabled="false">
 		<classes>
 			<class name="NumberArraysTests.TestMaxProfitLossInStocksTestNG" />
 		</classes>
 	</test> <!-- SequenceParallel01 -->
-	<test thread-count="2" name="SequenceParallel02" parallel="true"
+	<test thread-count="2" name="SequenceParallel02" parallel="false"
 		enabled="false">
 		<classes>
 			<class name="NumberArraysTests.TestPrimeNumbersTestNG" />
@@ -20,7 +20,7 @@
 			<!-- <class name="RestAssuredJSONTests.TestGETRequest"></class> -->
 			<!-- <class name="RestAssuredJSONTests.TestPOSTResponseValidator"></class> -->
 			<!-- <class name="RestAssuredJSONTests.TestPOSTDeleteE2E"></class> -->
-			<class name="RestAssuredJSONTests.TestGETRequestJSONParse"></class>
+			<!-- <class name="RestAssuredJSONTests.TestGETRequestJSONParse"></class> -->
 		</classes>
 	</test>
 	<test thread-count="2" name="RestAPIXMLTests" enabled="false">
@@ -30,5 +30,11 @@
 			<!-- <class name="RestAssuredXMLTests.TestPOSTDeleteE2E"></class> -->
 		</classes>
 	</test>
+	<test thread-count="2" name="JIRARestAPITests" enabled="true">
+		<classes>
+			<class name="jira.api.rest.POSTJIRAIssue"></class>
+		</classes>
+	</test>
+	
 
 </suite> <!-- TestNGLearningSuite -->

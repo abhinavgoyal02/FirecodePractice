@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestNGLearningSuite]">
-  <test name="RestAPIJSONTests(failed)">
+  <test name="JIRARestAPITests(failed)">
     <classes>
-      <class name="RestAssuredJSONTests.TestGETRequestJSONParse">
+      <class name="jira.api.rest.POSTJIRAIssue">
         <methods>
-          <include name="searchGoogleMapsJSON"/>
+          <include name="addPlaceInGoogleMaps"/>
         </methods>
-      </class> <!-- RestAssuredJSONTests.TestGETRequestJSONParse -->
+      </class> <!-- jira.api.rest.POSTJIRAIssue -->
     </classes>
-  </test> <!-- RestAPIJSONTests(failed) -->
+  </test> <!-- JIRARestAPITests(failed) -->
 </suite> <!-- Failed suite [TestNGLearningSuite] -->

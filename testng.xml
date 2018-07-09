@@ -14,7 +14,7 @@
 			<class name="NumberArraysTests.TestPrimeNumbersTestNG" />
 		</classes>
 	</test>
-	<test thread-count="2" name="RestAPIJSONTests">
+	<test thread-count="2" name="RestAPIJSONTests" enabled="false">
 		<classes>
 			<!-- <class name="RestAssuredJSONTests.TestPOSTRequest"></class> -->
 			<!-- <class name="RestAssuredJSONTests.TestGETRequest"></class> -->
@@ -32,9 +32,11 @@
 	</test>
 	<test thread-count="2" name="JIRARestAPITests" enabled="true">
 		<classes>
-			<class name="jira.api.rest.POSTJIRAIssue"></class>
+			<!-- <class name="jira.api.rest.POSTJIRAIssue"></class> -->
+<!-- 			<class name="jira.api.rest.POSTJIRAComment"></class> -->
+			<class name="jira.api.rest.DELETEJIRAComment"></class>
 		</classes>
 	</test>
-	
+
 
 </suite> <!-- TestNGLearningSuite -->

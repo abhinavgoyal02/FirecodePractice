@@ -10,7 +10,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import utilities.PayloadReader;
 
-public class POSTJIRAIssue {
+public class DELETEJIRAComment {
 	private String baseURI = "http://localhost:8080";
 
 	@Test
@@ -32,23 +32,23 @@ public class POSTJIRAIssue {
 			JsonPath jResponse01 = new JsonPath(res01.asString());
 			String sessionID = jResponse01.getString("session.value");
 			System.out.println(sessionID);
-		
-		String payloadBody02 = PayloadReader.getPayloadasString("JIRAIssuePayload.json");	
-		Response res02 = RestAssured.given()
+			
+		Response res03 = RestAssured.given()
 			.contentType(ContentType.JSON)
-			.body(payloadBody02)
 			.header("cookie", "JSESSIONID=" + sessionID)
 					
 			.when()
-			.post("rest/api/2/issue")
+			.delete("/rest/api/2/issue/RAT-8" //+ issueIdOrKey
+					+ "/comment/10000" // + id
+					)
 					
-			.then().assertThat().statusCode(201)
+			.then().assertThat().statusCode(204).log().all()
 				
 			.extract().response();
 			
-			JsonPath jResponse02 = new JsonPath(res02.asString());
-			String key = jResponse02.getString("key");
-			System.out.println(key);	
+			JsonPath jResponse03 = new JsonPath(res03.asString());
+//			String key = jResponse03.getString("key");
+			System.out.println(jResponse03);		
 			
 	}
 }

@@ -10,7 +10,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import utilities.PayloadReader;
 
-public class POSTJIRAIssue {
+public class POSTJIRAComment {
 	private String baseURI = "http://localhost:8080";
 
 	@Test
@@ -47,8 +47,26 @@ public class POSTJIRAIssue {
 			.extract().response();
 			
 			JsonPath jResponse02 = new JsonPath(res02.asString());
-			String key = jResponse02.getString("key");
-			System.out.println(key);	
+			String issueIdOrKey = jResponse02.getString("id");
+			System.out.println(issueIdOrKey);	
+			
+		String payloadBody03 = PayloadReader.getPayloadasString("JIRACommentPayload.json");	
+		Response res03 = RestAssured.given()
+			.contentType(ContentType.JSON)
+			.body(payloadBody03)
+			.header("cookie", "JSESSIONID=" + sessionID)
+					
+			.when()
+			.post("rest/api/2/issue/RAT-5" + //issueIdOrKey
+			 "/comment")
+					
+			.then().assertThat().statusCode(201).log().all()
+				
+			.extract().response();
+			
+			JsonPath jResponse03 = new JsonPath(res03.asString());
+//			String key = jResponse03.getString("key");
+			System.out.println(jResponse03);		
 			
 	}
 }

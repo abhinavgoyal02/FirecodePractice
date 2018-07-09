@@ -1,4 +1,17 @@
-{  
-   "username":"abhinavgoyal02.prt",
-   "password":"admin@123"
+{
+       "fields": {
+        "project": {
+            "key": "RAT"
+        },
+        "summary": "AUTOMATED: Backend Issue 101",
+        "issuetype": {
+            "name": "Bug"
+        },
+        "assignee": {
+            "name": "abhinavgoyal02.prt"
+        },
+        "reporter": {
+            "name": "abhinavgoyal02.prt"
+        }
+    }
 }

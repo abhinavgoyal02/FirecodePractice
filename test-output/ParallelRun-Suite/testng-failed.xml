@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [ParallelRun-Suite]" parallel="methods">
+  <test name="TestParallelRuns(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testng.features.SampleTestClass2">
+        <methods>
+          <include name="sampleTest3"/>
+        </methods>
+      </class> <!-- testng.features.SampleTestClass2 -->
+    </classes>
+  </test> <!-- TestParallelRuns(failed) -->
+</suite> <!-- Failed suite [ParallelRun-Suite] -->

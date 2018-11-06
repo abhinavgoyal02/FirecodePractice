@@ -1,0 +1,10 @@
+2018-09-11 09:07:40 DEBUG wire:73 -  << "[\r][\n]"
+2018-09-11 09:07:40 DEBUG wire:73 -  << "a[\r][\n]"
+2018-09-11 09:07:40 DEBUG wire:73 -  << "[0x3][0x0][0xd1][0x12]1[\n]"
+2018-09-11 09:07:40 DEBUG wire:87 -  << "S[0x0][0x0][0x0]"
+2018-09-11 09:07:40 DEBUG wire:73 -  << "[\r][\n]"
+2018-09-11 09:07:40 DEBUG wire:73 -  << "0[\r][\n]"
+2018-09-11 09:07:40 DEBUG wire:73 -  << "[\r][\n]"
+2018-09-11 09:07:40 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:547 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-09-11 09:07:40 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2cab9998
+2018-09-11 09:07:40 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely

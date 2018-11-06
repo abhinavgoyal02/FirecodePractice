@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Reports-Suite">
+	<test name="ReportNG-Test">
+	    <classes>
+	        <class name="reportng.features.ReportNGTest1"/>
+	        <class name="reportng.features.ReportNGTest2"/>
+	    </classes>
+	</test>
+</suite> <!-- TestNGLearningSuite -->

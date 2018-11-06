@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [TestNGLearningSuite]">
-  <test name="JIRARestAPITests(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="jira.api.rest.POSTJIRAIssue">
+      <class name="assertion.types.AssertionTypesTest">
         <methods>
-          <include name="getJIRASessionID"/>
+          <include name="testSoftAssertVerifyAll"/>
         </methods>
-      </class> <!-- jira.api.rest.POSTJIRAIssue -->
+      </class> <!-- assertion.types.AssertionTypesTest -->
     </classes>
-  </test> <!-- JIRARestAPITests(failed) -->
-</suite> <!-- Failed suite [TestNGLearningSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

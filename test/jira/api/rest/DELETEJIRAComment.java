@@ -8,7 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import utilities.PayloadReader;
+import utilities.PayloadParser;
 
 public class DELETEJIRAComment {
 	private String baseURI = "http://localhost:8080";
@@ -16,7 +16,7 @@ public class DELETEJIRAComment {
 	@Test
 	public void getJIRASessionID() throws IOException {
 		RestAssured.baseURI = baseURI;
-		String payloadBody01 = PayloadReader.getPayloadasString("JIRALoginPayload.json");
+		String payloadBody01 = PayloadParser.getPayloadasString("JIRALoginPayload.json");
 		
 		Response res01 = RestAssured.given()
 			.contentType(ContentType.JSON)

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jira.api.rest.POSTJIRAIssue">
+      <class name="assertion.types.AssertionTypesTest">
         <methods>
-          <include name="getJIRASessionID"/>
+          <include name="testSoftAssertVerifyAll"/>
         </methods>
-      </class> <!-- jira.api.rest.POSTJIRAIssue -->
+      </class> <!-- assertion.types.AssertionTypesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

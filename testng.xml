@@ -30,13 +30,16 @@
 			<!-- <class name="RestAssuredXMLTests.TestPOSTDeleteE2E"></class> -->
 		</classes>
 	</test>
-	<test thread-count="2" name="JIRARestAPITests" enabled="true">
+	<test thread-count="2" name="JIRARestAPITests" enabled="false">
 		<classes>
 			<!-- <class name="jira.api.rest.POSTJIRAIssue"></class> -->
 <!-- 			<class name="jira.api.rest.POSTJIRAComment"></class> -->
-			<class name="jira.api.rest.DELETEJIRAComment"></class>
+<!-- 			<class name="jira.api.rest.DELETEJIRAComment"></class> -->
 		</classes>
 	</test>
-
-
+	<test thread-count="2" name="TwitterAPITests" enabled="true">
+		<classes>
+			<class name="twitter.api.rest.GETTweets"></class>
+		</classes>
+	</test>
 </suite> <!-- TestNGLearningSuite -->

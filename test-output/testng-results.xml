@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNGLearningSuite" duration-ms="33789" started-at="2018-06-17T08:34:58Z" finished-at="2018-06-17T08:35:32Z">
+  <suite name="Default suite" duration-ms="50" started-at="2018-09-18T05:23:12Z" finished-at="2018-09-18T05:23:12Z">
     <groups>
     </groups>
-    <test name="JIRARestAPITests" duration-ms="33789" started-at="2018-06-17T08:34:58Z" finished-at="2018-06-17T08:35:32Z">
-      <class name="jira.api.rest.DELETEJIRAComment">
-        <test-method status="PASS" signature="getJIRASessionID()[pri:0, instance:jira.api.rest.DELETEJIRAComment@cc285f4]" name="getJIRASessionID" duration-ms="33769" started-at="2018-06-17T14:04:58Z" finished-at="2018-06-17T14:05:32Z">
+    <test name="Default test" duration-ms="50" started-at="2018-09-18T05:23:12Z" finished-at="2018-09-18T05:23:12Z">
+      <class name="reportng.features.ReportNGTest1">
+        <test-method status="PASS" signature="firstTest()[pri:0, instance:reportng.features.ReportNGTest1@28d25987]" name="firstTest" duration-ms="24" started-at="2018-09-18T10:53:12Z" finished-at="2018-09-18T10:53:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getJIRASessionID -->
-      </class> <!-- jira.api.rest.DELETEJIRAComment -->
-    </test> <!-- JIRARestAPITests -->
-  </suite> <!-- TestNGLearningSuite -->
+        </test-method> <!-- firstTest -->
+        <test-method status="PASS" signature="secondTest()[pri:0, instance:reportng.features.ReportNGTest1@28d25987]" name="secondTest" duration-ms="2" started-at="2018-09-18T10:53:12Z" finished-at="2018-09-18T10:53:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secondTest -->
+      </class> <!-- reportng.features.ReportNGTest1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

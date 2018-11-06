@@ -8,7 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import utilities.PayloadReader;
+import utilities.PayloadParser;
 
 public class POSTJIRAComment {
 	private String baseURI = "http://localhost:8080";
@@ -16,7 +16,7 @@ public class POSTJIRAComment {
 	@Test
 	public void getJIRASessionID() throws IOException {
 		RestAssured.baseURI = baseURI;
-		String payloadBody01 = PayloadReader.getPayloadasString("JIRALoginPayload.json");
+		String payloadBody01 = PayloadParser.getPayloadasString("JIRALoginPayload.json");
 		
 		Response res01 = RestAssured.given()
 			.contentType(ContentType.JSON)
@@ -33,7 +33,7 @@ public class POSTJIRAComment {
 			String sessionID = jResponse01.getString("session.value");
 			System.out.println(sessionID);
 		
-		String payloadBody02 = PayloadReader.getPayloadasString("JIRAIssuePayload.json");	
+		String payloadBody02 = PayloadParser.getPayloadasString("JIRAIssuePayload.json");	
 		Response res02 = RestAssured.given()
 			.contentType(ContentType.JSON)
 			.body(payloadBody02)
@@ -50,7 +50,7 @@ public class POSTJIRAComment {
 			String issueIdOrKey = jResponse02.getString("id");
 			System.out.println(issueIdOrKey);	
 			
-		String payloadBody03 = PayloadReader.getPayloadasString("JIRACommentPayload.json");	
+		String payloadBody03 = PayloadParser.getPayloadasString("JIRACommentPayload.json");	
 		Response res03 = RestAssured.given()
 			.contentType(ContentType.JSON)
 			.body(payloadBody03)

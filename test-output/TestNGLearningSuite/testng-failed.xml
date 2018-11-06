@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestNGLearningSuite]">
-  <test name="JIRARestAPITests(failed)">
+  <test name="TwitterAPITests(failed)">
     <classes>
-      <class name="jira.api.rest.POSTJIRAIssue">
+      <class name="twitter.api.rest.GETTweets">
         <methods>
-          <include name="getJIRASessionID"/>
+          <include name="retrieveTweetsTimeline"/>
         </methods>
-      </class> <!-- jira.api.rest.POSTJIRAIssue -->
+      </class> <!-- twitter.api.rest.GETTweets -->
     </classes>
-  </test> <!-- JIRARestAPITests(failed) -->
+  </test> <!-- TwitterAPITests(failed) -->
 </suite> <!-- Failed suite [TestNGLearningSuite] -->

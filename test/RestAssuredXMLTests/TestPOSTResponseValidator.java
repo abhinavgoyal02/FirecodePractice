@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
-import utilities.PayloadReader;
+import utilities.PayloadParser;
 
 public class TestPOSTResponseValidator {
 	private String baseURI = "https://maps.googleapis.com";
@@ -15,7 +15,7 @@ public class TestPOSTResponseValidator {
 	@Test
 	public void addPlaceInGoogleMaps() throws IOException {
 		RestAssured.baseURI = baseURI;
-		String payloadBody = PayloadReader.getPayloadasString("POSTRequestPayload.xml");
+		String payloadBody = PayloadParser.getPayloadasString("POSTRequestPayload.xml");
 		
 		Response res = RestAssured.given()
 			.queryParam("key", "AIzaSyCn0NwEYM0NdwKqqr1klSSEovTEXJZidLg")
